@@ -1,0 +1,28 @@
+*****springMVC更多的注解
+1.@Response与ajax请求值综合
+(1)@Response返回前端json字符串，要注意汉字编码
+@Response(value="/go",produces="text/json;charset=utf-8")
+(2)掌握jQuery的ajax请求方式中的ajax方法
+$.ajax({
+	type:"post",
+	url:"go",
+	data:{"user":"tom","pass":"1234"},
+	success:function(){
+	var obj=data;
+	.................
+	...... 
+	}
+})
+
+以下用于方法参数中
+2.@RequestParam,用于获取前端传的值
+@RequsestMapping("/play")
+public String hqy(@RequsetParam String req)
+
+3.@PathVariable,路径变量注解
+@RequestMapping("/play/{reg}")
+public String hqy(@PathVariable String req)
+
+4.@ModelAttibute
+5.重定向值之Flash传参
+
